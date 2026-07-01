@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio – Michał Żebrowski</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-900 text-gray-200">
+
+    <!-- NAVBAR -->
+    <nav class="flex justify-between items-center px-8 py-6 bg-gray-900 fixed w-full top-0 z-50">
+        <h1 class="text-xl font-bold">Michał Żebrowski</h1>
+        <button class="md:hidden text-gray-200" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+            ☰
+        </button>
+        <div class="space-x-6 hidden md:block">
+            <a href="#projects" class="hover:text-blue-400">Projekty</a>
+            <a href="#skills" class="hover:text-blue-400">Umiejętności</a>
+            <a href="#courses" class="hover:text-blue-400">Kursy</a>
+            <a href="#interests" class="hover:text-blue-400">Zainteresowania</a>
+            <a href="#contact" class="hover:text-blue-400">Kontakt</a>
+        </div>
+    </nav>
+
+    <!-- MOBILE MENU -->
+    <div id="mobile-menu" class="hidden bg-gray-900 px-8 pt-2 pb-4 md:hidden">
+        <a href="#projects" class="block py-1 hover:text-blue-400">Projekty</a>
+        <a href="#skills" class="block py-1 hover:text-blue-400">Umiejętności</a>
+        <a href="#courses" class="block py-1 hover:text-blue-400">Kursy</a>
+        <a href="#interests" class="block py-1 hover:text-blue-400">Zainteresowania</a>
+        <a href="#contact" class="block py-1 hover:text-blue-400">Kontakt</a>
+    </div>
+
+    <!-- HERO -->
+    <section class="min-h-screen flex flex-col md:flex-row justify-center items-center text-center md:text-left px-6 pt-28 gap-10">
+
+        <!-- PHOTO -->
+        <div class="w-40 h-40 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-blue-500 shadow-xl">
+            <img src="img/images.jpg" alt="Zdjęcie Michała" class="w-full h-full object-cover">
+        </div>
+
+        <!-- TEXT -->
+        <div class="max-w-xl">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Cześć, jestem Michał</h2>
+            <p class="text-base md:text-lg text-gray-400">
+                Administrator IT i inżynier systemów, sieci oraz bezpieczeństwa.  
+                Pracuję z systemami Windows i Linux, wirtualizacją, sieciami LAN/WAN, automatyzacją oraz usługami serwerowymi.
+            </p>
+
+            <div class="mt-8 space-y-3 md:space-y-0 md:space-x-4 flex flex-col md:flex-row">
+                <a href="#projects" class="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg text-center">Zobacz projekty</a>
+                <a href="#contact" class="px-6 py-3 border border-gray-500 hover:border-gray-300 rounded-lg text-center">Kontakt</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="px-6 md:px-8 py-16 md:py-20">
+        <h3 class="text-3xl font-bold mb-10 text-center">Projekty</h3>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <!-- PROJEKT 1 -->
+            <div class="bg-gray-800 p-6 rounded-xl">
+                <div class="relative mb-4">
+                    <img src="img/1.jpg" class="rounded-lg w-full h-48 object-cover">
+                    <button onclick="openLightbox('img/1.jpg')" 
+                            class="absolute bottom-2 right-2 bg-black bg-opacity-60 px-3 py-1 rounded text-sm hover:bg-opacity-80">
+                        Powiększ
+                    </button>
+                </div>
+
+                <h4 class="text-xl font-semibold mb-2">Klaster Proxmox + Windows Server 2025</h4>
+                <p class="text-gray-400 text-sm">
+                    Środowisko produkcyjne: klaster HA Proxmox, backupy PBS, AD DS, DNS, WWW, serwer plików.
+                </p>
+            </div>
+
+            <!-- PROJEKT 2 -->
+            <div class="bg-gray-800 p-6 rounded-xl">
+                <div class="relative mb-4">
+                    <img src="img/1.jpg" class="rounded-lg w-full h-48 object-cover">
+                    <button onclick="openLightbox('img/1.jpg')" 
+                            class="absolute bottom-2 right-2 bg-black bg-opacity-60 px-3 py-1 rounded text-sm hover:bg-opacity-80">
+                        Powiększ
+                    </button>
+                </div>
+
+                <h4 class="text-xl font-semibold mb-2">Serwer Samba – backup zdjęć</h4>
+                <p class="text-gray-400 text-sm">
+                    Automatyczna synchronizacja zdjęć z telefonu na serwer Windows/Samba.
+                </p>
+            </div>
+
+            <!-- PROJEKT 3 -->
+            <div class="bg-gray-800 p-6 rounded-xl">
+                <div class="relative mb-4">
+                    <img src="img/1.jpg" class="rounded-lg w-full h-48 object-cover">
+                    <button onclick="openLightbox('img/1.jpg')" 
+                            class="absolute bottom-2 right-2 bg-black bg-opacity-60 px-3 py-1 rounded text-sm hover:bg-opacity-80">
+                        Powiększ
+                    </button>
+                </div>
+
+                <h4 class="text-xl font-semibold mb-2">Monitoring CCTV</h4>
+                <p class="text-gray-400 text-sm">
+                    Montaż i konfiguracja kamer IP, rejestratora, sieci PoE, zdalnego dostępu.
+                </p>
+            </div>
+
+            <!-- PROJEKT 4 -->
+            <div class="bg-gray-800 p-6 rounded-xl">
+                <div class="relative mb-4">
+                    <img src="img/1.jpg" class="rounded-lg w-full h-48 object-cover">
+                    <button onclick="openLightbox('img/1.jpg')" 
+                            class="absolute bottom-2 right-2 bg-black bg-opacity-60 px-3 py-1 rounded text-sm hover:bg-opacity-80">
+                        Powiększ
+                    </button>
+                </div>
+
+                <h4 class="text-xl font-semibold mb-2">Home Assistant + VPN</h4>
+                <p class="text-gray-400 text-sm">
+                    Automatyzacja domu, Zigbee, Wi-Fi, zdalny dostęp przez VPN.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="px-6 md:px-8 py-16 md:py-20 bg-gray-800">
+        <h3 class="text-3xl font-bold mb-10 text-center">Umiejętności</h3>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <div>
+                <h4 class="font-semibold text-xl mb-2">Języki obce</h4>
+                <ul class="text-gray-400 list-disc ml-5">
+                    <li>Angielski – B2</li>
+                    <li>Niemiecki – A1</li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-semibold text-xl mb-2">Systemy i komputery</h4>
+                <p class="text-gray-400">
+                    Windows, Linux, budowa komputerów, administracja systemami.
+                </p>
+            </div>
+
+            <div>
+                <h4 class="font-semibold text-xl mb-2">Microsoft 365 / Office</h4>
+                <p class="text-gray-400">
+                    Word, Excel, PowerPoint, Outlook, Teams.
+                </p>
+            </div>
+
+            <div>
+                <h4 class="font-semibold text-xl mb-2">Automatyzacja</h4>
+                <p class="text-gray-400">
+                    Bash, .bat, PowerShell.
+                </p>
+            </div>
+
+            <div>
+                <h4 class="font-semibold text-xl mb-2">Wirtualizacja i kontenery</h4>
+                <p class="text-gray-400">
+                    HyperV, Proxmox, VMWare, Docker.
+                </p>
+            </div>
+
+            <div>
+                <h4 class="font-semibold text-xl mb-2">Kontrola wersji</h4>
+                <p class="text-gray-400">
+                    GIT – praca z repozytoriami.
+                </p>
+            </div>
+
+            <div>
+                <h4 class="font-semibold text-xl mb-2">Bazy danych i SQL</h4>
+                <p class="text-gray-400">
+                    Relacyjne bazy danych, SQL.
+                </p>
+            </div>
+
+            <div>
+                <h4 class="font-semibold text-xl mb-2">Programowanie</h4>
+                <p class="text-gray-400">
+                    HTML, CSS, JavaScript, Python, PHP.
+                </p>
+            </div>
+
+            <div>
+                <h4 class="font-semibold text-xl mb-2">Sieci LAN/WAN</h4>
+                <p class="text-gray-400">
+                    Routing, VLAN, firewall, konfiguracja urządzeń.
+                </p>
+            </div>
+
+            <div>
+                <h4 class="font-semibold text-xl mb-2">Backup / HA / DR</h4>
+                <p class="text-gray-400">
+                    Kopie zapasowe, wysoka dostępność, disaster recovery.
+                </p>
+            </div>
+
+            <div>
+                <h4 class="font-semibold text-xl mb-2">Usługi serwerowe</h4>
+                <p class="text-gray-400">
+                    DNS, DHCP, AD, WWW, serwery plików, bazy danych.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- COURSES -->
+   <section id="certs" class="px-6 md:px-8 py-20">
+    <h2 class="text-3xl font-bold mb-10 text-center">Certyfikaty</h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    
+	<!-- MS-4018 Copilot -->
+<div class="bg-gray-800 p-4 rounded-lg flex gap-4 items-start">
+    <button onclick="openLightbox('img/MS-4018.png')" class="contents">
+    <img src="img/MS-4018.png" class="w-30 h-20 rounded-md object-cover border border-gray-700"></button>
+    <div>
+        <details><summary>
+        <h4 class="text-lg font-semibold leading-tight">MS-4018: Draft, analyze, and present with Microsoft 365 Copilot</h4>
+        <p class="text-gray-400 text-sm">Compendium Centrum Edukacyjne — 12.06.2026</p></summary>
+        <p class="text-gray-300 text-xs mt-2">
+            Plan szkolenia:<br>
+            Wprowadzenie do Microsoft 365 Copilot
+            Czym jest Microsoft 365 Copilot?
+            Jak działa Microsoft 365 Copilot - omówienie mechanizmów
+            Kluczowe komponenty architektury Microsoft 365 Copilot
+            Odpowiedzialna sztuczna inteligencja (Responsible AI) w zobowiązaniach firmy Microsoft
+            Zwiększ produktywność i uwolnij kreatywność dzięki czatowi wspieranemu przez AI
+            Microsoft 365 Copilot Chat - wprowadzenie do narzędzia
+            Optymalizacja pracy dzięki Copilot Chat z wykorzystaniem danych firmowych (work-
+            grounded data)
+            Maksymalizacja produktywności dzięki Copilot Chat z wykorzystaniem danych sieciowych
+            (web-grounded data)
+            Ćwiczenie (opcjonalne) - Perfekcyjna rozmowa kwalifikacyjna z pomocą Copilot Chat
+            Tworzenie skutecznych prezentacji z pomocą AI (PowerPoint)
+            Wprowadzenie do Copilot w aplikacji Microsoft PowerPoint
+            Tworzenie angażujących slajdów przy użyciu Microsoft 365 Copilot w PowerPoint
+            Dopracowywanie i ulepszanie struktury oraz wyglądu prezentacji
+            Ćwiczenie (opcjonalne) - Tworzenie kompletnej prezentacji od podstaw do efektu
+            końcowego
+            Przygotowywanie profesjonalnych dokumentów z pomocą AI (Word)
+            Tworzenie treści z wykorzystaniem Copilot w aplikacji Microsoft Word
+            Podnoszenie jakości i edycja tekstów przy użyciu Copilot w programie Word
+            Ćwiczenie (opcjonalne) - Pisanie, ulepszanie i udostępnianie dokumentu
+            Efektywne i produktywne spotkania z pomocą AI (Teams)
+            Sprawniejsza współpraca dzięki Copilot na czatach w aplikacji Teams
+            Efektywne spotkania i praca zespołowa z Copilot w Teams Meetings
+            Ćwiczenie (opcjonalne) - Kompleksowe zarządzanie współpracą projektową z Copilot w
+            Teams
+            Odkrywanie nowych wniosków z analizy danych z pomocą AI (Excel)
+            Uproszczenie podsumowywania, analizy oraz wizualizacji danych
+            Personalizacja integracji, analizy i wizualizacji danych przy użyciu Copilot w aplikacji Excel
+            Ćwiczenie (opcjonalne) - Zwiększanie efektywności i podejmowanie decyzji w oparciu o
+            dane
+            Od skrzynki odbiorczej do realnych efektów: Usprawnienie obsługi poczty e-mail z pomocą AI
+            (Outlook)
+            Pisanie angażujących wiadomości e-mail przy użyciu Copilot w Microsoft Outlook
+            Uproszczenie organizacji spotkań i zarządzania kalendarzem z Copilot w Outlook
+            Ćwiczenie (opcjonalne) - Maksymalne przyspieszenie współpracy zespołowej z Copilot w
+            Outlook
+        </p></details>
+        <p class="text-gray-400 text-sm">Numer poświadczenia: X19-56829</p>
+    </div>
+</div>
+
+<!-- Power BI -->
+<div class="bg-gray-800 p-4 rounded-lg flex gap-4 items-start">
+    <button onclick="openLightbox('img/powerbi.png')" class="contents">    
+    <img src="img/powerbi.png" class="w-30 h-20 rounded-md object-cover border border-gray-700"></button>
+    <div>
+        <details><summary>
+        <h4 class="text-lg font-semibold leading-tight">Podstawy Power BI</h4>
+        <p class="text-gray-400 text-sm">Santander Open Academy — 27.02.2026</p>
+        </summary>
+        <p class="text-gray-300 text-xs mt-2">
+            Analiza danych za pomocą usługi Power BI: importowanie, analiza i wizualizacja danych oraz optymalizacja prezentacji za pomocą edytora usługi Power Query.
+        </p>
+        </details>
+        <p class="text-gray-400 text-sm">Numer poświadczenia: X19-56829</p>
+    </div>
+</div>
+
+<!-- NCA6 -->
+<div class="bg-gray-800 p-4 rounded-lg flex gap-4 items-start">
+    <button onclick="openLightbox('img/certificate NCA6.png')" class="contents">
+    <img src="img/certificate NCA6.png" class="w-30 h-20 rounded-md object-cover border border-gray-700"></button>
+    <div>
+        <details><summary>
+        <h4 class="text-lg font-semibold leading-tight">Nutanix Certified Associate 6 (NCA6)</h4>
+        <p class="text-gray-400 text-sm">Nutanix - 12.02.2024</p></summary>
+        <p class="text-gray-300 text-xs mt-2">
+            Sekcja 1 – Opis zarządzania cyklem życia
+            Opis menedżera cyklu życia (LCM)
+            Monitorowanie aktualizacji oprogramowania i oprogramowania sprzętowego LCM
+            Sekcja 2 – Opis podstawowej administracji Nutanix
+            Opis wykonywania podstawowych zadań maszyn wirtualnych
+            Identyfikacja ustawień na poziomie klastra
+            Określenie poziomu licencji klastra
+            Sekcja 3 – Utrzymanie prawidłowego stanu środowiska klastra Nutanix
+            Wykonywanie i interpretacja kontroli stanu
+            Administracja alertami, zdarzeniami i zasadami
+            Utworzenie zgłoszenia do pomocy technicznej
+            Sekcja 4 – Opis opcji konfiguracji klastra
+            Określenie i opisanie czynników redundancji/replikacji
+            Identyfikacja komponentów pamięci masowej
+            Identyfikacja optymalizacji pamięci masowej
+            Identyfikacja obsługiwanych hiperwizorów
+            Identyfikacja podstawowych funkcji sieciowych AHV
+            Określenie przypadków użycia produktów i usług Nutanix
+        </p>
+        </details>
+        <p class="text-gray-400 text-sm">Numer poświadczenia: X19-56829</p>
+    </div>
+</div>
+
+<!-- NHCF -->
+<div class="bg-gray-800 p-4 rounded-lg flex gap-4 items-start">
+    <button onclick="openLightbox('img/certificate NHCF.png')" class="contents">
+    <img src="img/certificate NHCF.png" class="w-30 h-20 rounded-md object-cover border border-gray-700"></button>
+    <div>
+        <details><summary>
+        <h4 class="text-lg font-semibold leading-tight">Nutanix Hybrid Cloud Fundamentals (NHCF)</h4>
+        <p class="text-gray-400 text-sm">Nutanix — 06.02.2024</p>
+        </summary>
+        <p class="text-gray-300 text-xs mt-2">
+            Plan kursu
+            1: Wprowadzenie
+            Zrozumienie infrastruktury trójwarstwowej i hiperkonwergentnej (HCI)
+            Zrozumienie pakietów rozwiązań chmurowych Nutanix
+            Rozpoczęcie pracy z Prism Central i Prism Element
+            Zrozumienie Nutanix Pulse
+            Zrozumienie, kiedy używać Prism Central, a kiedy Prism Element
+            Podstawy konfiguracji klastra
+            Zrozumienie ustawień zabezpieczeń na poziomie klastra
+            Ćwiczenia praktyczne
+            Dostęp do Prism Element i Prism Central oraz ich eksploracja
+            Decyzja o użyciu Prism Central, a kiedy Prism Element
+            2: Koncepcje sprzętu i pamięci masowej
+            Zrozumienie węzłów, bloków i klastrów
+            Zrozumienie typów fizycznej pamięci masowej
+            Zrozumienie rozproszonej pamięci masowej AOS
+            Zrozumienie kluczowych koncepcji pamięci masowej, takich jak pule pamięci masowej, kontenery pamięci masowej, współczynnik redundancji, współczynnik replikacji, rezerwacja pojemności, odporność klastra i migawki
+            Korzystanie z różnych pulpitów nawigacyjnych Prism Central do monitorowania sprzętu i pamięci masowej klastra
+            Ćwiczenia praktyczne
+            Poznanie pulpitów nawigacyjnych dotyczących sprzętu i kontenerów pamięci masowej
+            Tworzenie kontenera pamięci masowej
+            3: Sieci
+            Zrozumienie terminologii sieciowej AHV i kluczowych pojęć, takich jak sieci zarządzane i niezarządzane
+            Monitorowanie sieci klastrowych za pomocą Prism Central
+            Zapoznanie się z programem Prism Element w celu zapoznania się z programem Network Visualizer
+            Ćwiczenia praktyczne
+            Wyświetlanie konfiguracji sieci w programie Prism Central
+            Korzystanie z programu Network Visualizer
+            4: Zarządzanie obrazami
+            Zrozumienie usługi obrazowania
+            Monitorowanie, przesyłanie, importowanie i zarządzanie obrazami za pomocą programu Prism Central
+            Ćwiczenia praktyczne
+            Zapoznanie się z panelem obrazów
+            Przesyłanie i importowanie obrazu do programu Prism Central
+            Przesyłanie obrazu za pomocą programu Prism Element
+            5: Zarządzanie maszynami wirtualnymi
+            Tworzenie i monitorowanie maszyn wirtualnych za pomocą programu Prism Central
+            Wykonywanie podstawowych zadań zarządzania maszynami wirtualnymi, takich jak aktualizowanie, usuwanie, eksportowanie i klonowanie maszyn wirtualnych; tworzenie migawek; i tworzenie punktów odzyskiwania maszyn wirtualnych
+            Zrozumienie kategorii i zasad powinowactwa
+            Ćwiczenia praktyczne
+            Zapoznanie się z panelem maszyn wirtualnych
+            Tworzenie maszyn wirtualnych
+            Tworzenie punktu odzyskiwania maszyn wirtualnych
+            Klonowanie maszyny wirtualnej
+            Eksportowanie maszyny wirtualnej jako pliku OVA
+            6: Podstawy tworzenia kopii zapasowych i odzyskiwania po awarii
+            Zrozumienie ochrony danych i strategii ochrony danych
+            Tworzenie migawek i punktów odzyskiwania
+            Korzystanie z panelu ochrony danych
+            Tworzenie domen ochrony i zdalnych lokalizacji
+            Zrozumienie terminów i pojęć dotyczących odzyskiwania po awarii Nutanix
+            Ćwiczenia praktyczne
+            Tworzenie domen ochrony i lokalne przywracanie maszyn wirtualnych
+            Konfigurowanie zdalnych lokalizacji
+            Tworzenie domen ochrony za pomocą zdalnych lokalizacji
+            Przeprowadzanie migracji maszyn wirtualnych
+            7: Monitorowanie wydajności i stanu klastra
+            Używanie Prism Central do tworzenia sesji, wykresów i raportów
+            Zrozumienie i analiza alertów i zdarzeń
+            Konfigurowanie wiadomości e-mail z alertami
+            Zbieranie dzienników
+            Używanie portalu pomocy technicznej Nutanix do tworzenia zgłoszeń pomocy technicznej
+            Ćwiczenia praktyczne
+            Dodawanie wbudowanych wykresów do analizy Panel
+            Tworzenie niestandardowego wykresu
+            Tworzenie nowego raportu
+            Przeglądanie, pobieranie i planowanie raportów
+            Monitorowanie stanu klastra
+            Zbieranie logów
+            8: Licencjonowanie i przeprowadzanie aktualizacji
+            Zapoznanie się z Menedżerem licencji
+            Wyświetlanie szczegółów licencji w Prism i w portalu Nutanix Support & Insights
+            Licencjonowanie klastra
+            Zapoznanie się z Menedżerem cyklu życia (LCM) i przepływem pracy LCM
+            Korzystanie z panelu LCM w Prism Central i Prism Element
+            Użycie LCM do przeprowadzenia inwentaryzacji
+            Ćwiczenia praktyczne
+            Zapoznanie się z panelem LCM
+            Przeprowadzanie inwentaryzacji w lokalizacji połączonej i w lokalizacji ciemnej
+        </p>
+        </details>
+    </div>
+</div>
+
+<!-- Docker -->
+<div class="bg-gray-800 p-4 rounded-lg flex gap-4 items-start">
+    <button onclick="openLightbox('img/Containerization Using Docker.png')" class="contents">
+        <img src="img/Containerization Using Docker.png" class="w-30 h-20 rounded-md object-cover border border-gray-700">
+    </button>
+    <div>
+        <details><summary>
+        <h4 class="text-lg font-semibold leading-tight">Containerization Using Docker</h4>
+        <p class="text-gray-400 text-sm">Coursera, Coursera project network — 05.11.2023</p>
+        </summary>
+        <p class="text-gray-300 text-xs mt-2">
+            Tworzenie kontenerów, budowę obrazów, izolację aplikacji,
+            zarządzanie środowiskami Docker oraz podstawy Dockerfile.
+        </p>
+        </details>
+        <p class="text-gray-400 text-sm">Zweryfikuj: <a href="https://coursera.org/verify/ZEEY5LG5C2TY">https://coursera.org/verify/ZEEY5LG5C2TY</a></p>
+    </div>
+</div>
+
+<!-- Linux + Shell -->
+<div class="bg-gray-800 p-4 rounded-lg flex gap-4 items-start">
+    <button onclick="openLightbox('img/Hands-on Introduction to Linux Commands and Shell Scripting.png')" class="contents">
+        <img src="img/Hands-on Introduction to Linux Commands and Shell Scripting.png" class="w-30 h-20 rounded-md object-cover border border-gray-700">
+    </button>
+    <div>
+        <details><summary>
+        <h4 class="text-lg font-semibold leading-tight">Hands-on Introduction to Linux Commands and Shell Scripting</h4>
+        <p class="text-gray-400 text-sm">Coursera, IBM — 20.11.2023</p>
+        </summary>
+        <p class="text-gray-300 text-xs mt-2">
+            Opisz architekturę Linuksa i popularne dystrybucje Linuksa oraz aktualizuj i instaluj oprogramowanie w systemie Linux.
+            Wykonuj typowe polecenia informacyjne, dotyczące plików, treści, nawigacji, kompresji i obsługi sieci w powłoce Bash.
+            Twórz skrypty powłoki z użyciem poleceń Linuksa, zmiennych środowiskowych, potoków i filtrów.
+            Planuj zadania cron w systemie Linux za pomocą crontab i wyjaśnij składnię cron.
+        </p>
+        </details>
+        <p class="text-gray-400 text-sm">Zweryfikuj: <a href="https://www.coursera.org/verify/K8GZZEETWT2A">https://www.coursera.org/verify/K8GZZEETWT2A</a></p>
+    </div>
+</div>
+
+<!-- Docker Basics -->
+<div class="bg-gray-800 p-4 rounded-lg flex gap-4 items-start">
+    <button onclick="openLightbox('img/Introduction to Docker The Basics.png')" class="contents">
+        <img src="img/Introduction to Docker The Basics.png" class="w-30 h-20 rounded-md object-cover border border-gray-700">
+    </button>
+    <div>
+        <details><summary>
+        <h4 class="text-lg font-semibold leading-tight">Introduction to Docker: The Basics</h4>
+        <p class="text-gray-400 text-sm">Coursera, Coursera project network — 15.11.2023</p>
+        </summary>
+        <p class="text-gray-300 text-xs mt-2">
+            Agenda obejmowała podstawy konteneryzacji, działanie silnika Docker,
+            tworzenie i uruchamianie kontenerów oraz zarządzanie obrazami.
+        </p>
+        </details>
+        <p class="text-gray-400 text-sm">Zweryfikuj: <a href="https://www.coursera.org/verify/K8GZZEETWT2A">https://www.coursera.org/verify/K8GZZEETWT2A</a></p>
+    </div>
+</div>
+
+<!-- Google IT Support -->
+<div class="bg-gray-800 p-4 rounded-lg flex gap-4 items-start">
+    <button onclick="openLightbox('img/Google IT Support.png')" class="contents">
+        <img src="img/Google IT Support.png" class="w-30 h-20 rounded-md object-cover border border-gray-700">
+    </button>
+    <div>
+        <details><summary>
+        <h4 class="text-lg font-semibold leading-tight">Google IT Support</h4>
+        <p class="text-gray-400 text-sm">Coursera, Google — 20.07.2023</p>
+        </summary>
+        <p class="text-gray-300 text-xs mt-2">
+            Osoby, które uzyskały Certyfikat Google IT Support Professional, ukończyły pięć kursów opracowanych przez Google, które obejmują:
+        </p>
+        </details>
+        <p class="text-gray-400 text-sm">Zweryfikuj: <a href="https://coursera.org/verify/professional-cert/3WKHM72RRTCR">https://coursera.org/verify/professional-cert/3WKHM72RRTCR</a></p>
+    </div>
+</div>
+
+<!-- IT Security -->
+<div class="bg-gray-800 p-4 rounded-lg flex gap-4 items-start">
+    <button onclick="openLightbox('img/IT Security Defense against the digital dark arts.png')" class="contents">
+        <img src="img/IT Security Defense against the digital dark arts.png" class="w-30 h-20 rounded-md object-cover border border-gray-700">
+    </button>
+    <div>
+        <details><summary>
+        <h4 class="text-lg font-semibold leading-tight">IT Security: Defense against the digital dark arts</h4>
+        <p class="text-gray-400 text-sm">Coursera, Google — 20.07.2023</p>
+        </summary>
+        <p class="text-gray-300 text-xs mt-2">
+            Agenda obejmowała podstawy kryptografii, rodzaje ataków,
+            mechanizmy obrony, bezpieczeństwo sieci oraz ochronę danych.
+        </p>
+        </details>
+        <p class="text-gray-400 text-sm">Zweryfikuj: <a href="https://coursera.org/verify/EW8XWZSTNNXV">https://coursera.org/verify/EW8XWZSTNNXV</a></p>
+    </div>
+</div>
+
+<!-- System Administration -->
+<div class="bg-gray-800 p-4 rounded-lg flex gap-4 items-start">
+    <button onclick="openLightbox('img/System Administration and IT Infrastructure Services.png')" class="contents">
+        <img src="img/System Administration and IT Infrastructure Services.png" class="w-30 h-20 rounded-md object-cover border border-gray-700">
+    </button>
+    <div>
+        <details><summary>
+        <h4 class="text-lg font-semibold leading-tight">System Administration and IT Infrastructure Services</h4>
+        <p class="text-gray-400 text-sm">Coursera, Google — 16.07.2023</p>
+        </summary>
+        <p class="text-gray-300 text-xs mt-2">
+            Szkolenie obejmowało zarządzanie serwerami, usługi sieciowe,
+            monitorowanie infrastruktury, backupy oraz konfigurację środowisk IT.
+        </p>
+        </details>
+        <p class="text-gray-400 text-sm">Zweryfikuj: <a href="https://coursera.org/verify/CNSN2RC7A3TZ">https://coursera.org/verify/CNSN2RC7A3TZ</a></p>
+    </div>
+</div>
+
+<!-- Git & GitHub -->
+<div class="bg-gray-800 p-4 rounded-lg flex gap-4 items-start">
+    <button onclick="openLightbox('img/Introduction to Git and GitHub.png')" class="contents">
+        <img src="img/Introduction to Git and GitHub.png" class="w-30 h-20 rounded-md object-cover border border-gray-700">
+    </button>
+    <div>
+        <details><summary>
+        <h4 class="text-lg font-semibold leading-tight">Introduction to Git and GitHub</h4>
+        <p class="text-gray-400 text-sm">Coursera, Google — 15.07.2023</p>
+        </summary>
+        <p class="text-gray-300 text-xs mt-2">
+            Agenda obejmowała wersjonowanie kodu, commitowanie, branchowanie,
+            merge oraz pracę z repozytoriami GitHub.
+        </p>
+        </details>
+        <p class="text-gray-400 text-sm">Zweryfikuj: <a href="https://coursera.org/verify/3QKYZWFSKPDV">https://coursera.org/verify/3QKYZWFSKPDV</a></p>
+    </div>
+</div>
+
+<!-- OS Power User -->
+<div class="bg-gray-800 p-4 rounded-lg flex gap-4 items-start">
+    <button onclick="openLightbox('img/Operating Systems and You Becoming a Power User.png')" class="contents">
+        <img src="img/Operating Systems and You Becoming a Power User.png" class="w-30 h-20 rounded-md object-cover border border-gray-700">
+    </button>
+    <div>
+        <details><summary>
+        <h4 class="text-lg font-semibold leading-tight">Operating Systems and You: Becoming a Power User</h4>
+        <p class="text-gray-400 text-sm">Coursera, Google — 8.07.2023</p>
+        </summary>
+        <p class="text-gray-300 text-xs mt-2">
+        <p class="text-gray-300 text-xs mt-2">
+            Szkolenie obejmowało działanie systemów operacyjnych, zarządzanie procesami,
+            pamięcią, plikami, uprawnieniami oraz narzędzia administracyjne.
+        </p>
+        </details>
+        <p class="text-gray-400 text-sm">Zweryfikuj: <a href="https://coursera.org/verify/7B7GDNUM5GYW">https://coursera.org/verify/7B7GDNUM5GYW</a></p>
+    </div>
+</div>
+
+<!-- Networking -->
+<div class="bg-gray-800 p-4 rounded-lg flex gap-4 items-start">
+    <button onclick="openLightbox('img/The Bits and Bytes of Computer Networking.png')" class="contents">
+        <img src="img/The Bits and Bytes of Computer Networking.png" class="w-30 h-20 rounded-md object-cover border border-gray-700">
+    </button>
+    <div>
+        <details><summary>
+        <h4 class="text-lg font-semibold leading-tight">The Bits and Bytes of Computer Networking</h4>
+        <p class="text-gray-400 text-sm">Coursera, Google — 19.07.2023</p>
+        </summary>
+        <p class="text-gray-300 text-xs mt-2">
+            Agenda obejmowała protokoły sieciowe, routing, adresację IP,
+            warstwy OSI oraz analizę ruchu sieciowego.
+        </p>
+        </details>
+        <p class="text-gray-400 text-sm">Zweryfikuj: <a href="https://coursera.org/verify/XXZHA5EK3THN">https://coursera.org/verify/XXZHA5EK3THN</a></p>
+    </div>
+</div>
+
+<!-- Technical Support Fundamentals -->
+<div class="bg-gray-800 p-4 rounded-lg flex gap-4 items-start">
+    <button onclick="openLightbox('img/Technical Support Fundamentals.png')" class="contents">
+        <img src="img/Technical Support Fundamentals.png" class="w-30 h-20 rounded-md object-cover border border-gray-700">
+    </button>
+    <div>
+        <details><summary>
+        <h4 class="text-lg font-semibold leading-tight">Technical Support Fundamentals</h4>
+        <p class="text-gray-400 text-sm">Coursera, Google — 4.07.2023</p>
+        </summary>
+        <p class="text-gray-300 text-xs mt-2">
+            Szkolenie obejmowało podstawy wsparcia technicznego, diagnozowanie problemów,
+            konfigurację sprzętu i systemów oraz komunikację z użytkownikami.
+        </p>
+        </details>
+        <p class="text-gray-400 text-sm">Zweryfikuj: <a href="https://coursera.org/verify/E4KX2CLJLTVP">https://coursera.org/verify/E4KX2CLJLTVP</a></p>
+    </div>
+</div>
+
+<!-- Azure Fundamentals -->
+<div class="bg-gray-800 p-4 rounded-lg flex gap-4 items-start">
+<button onclick="openLightbox('img/AZ-900T00 Microsoft Azure Fundamentals.png')" class="contents">
+        <img src="img/AZ-900T00 Microsoft Azure Fundamentals.png" class="w-30 h-20 rounded-md object-cover border border-gray-700">
+    </button>
+    <div>
+        <details><summary>
+        <h4 class="text-lg font-semibold leading-tight">AZ-900T00 Microsoft Azure Fundamentals</h4>
+        <p class="text-gray-400 text-sm">Asseco Academy — 09-11.05.2023</p>
+        </summary>
+        <p class="text-gray-300 text-xs mt-2">
+Zakres
+    Podstawowe pojęcia dotyczące chmury obliczeniowej
+        Chmura obliczeniowa – wprowadzenie i kluczowe założenia
+            Wprowadzenie do chmury obliczeniowej
+            Czym jest chmura obliczeniowa
+            Model współodpowiedzialności (shared responsibility model)
+            Modele wdrożenia chmury
+            Model oparty o konsumpcję zasobów
+        Korzyści wynikające z korzystania z usług chmurowych
+            Wysoka dostępność i skalowalność jako zalety chmury
+            Niezawodność i przewidywalność działania środowiska chmurowego
+            Bezpieczeństwo i zgodność z regulacjami jako elementy chmury
+            Łatwość zarządzania infrastrukturą i usługami w chmurze
+        Typy usług chmurowych
+            Infrastruktura jako usługa (Infrastructure as a Service, IaaS)
+            Platforma jako usługa (Platform as a Service, PaaS)
+            Oprogramowanie jako usługa (Software as a Service, SaaS)
+    Architektura i usługi platformy Azure
+        Podstawowe komponenty architektury Azure
+            Czym jest Microsoft Azure
+            Rozpoczęcie pracy z kontami Azure
+            Fizyczna infrastruktura platformy Azure
+            Infrastruktura zarządzania platformą Azure
+        Usługi obliczeniowe i sieciowe Azure
+            Maszyny wirtualne Azure
+            Wirtualny pulpit (Azure Virtual Desktop)
+            Kontenery w środowisku Azure
+            Funkcje bezserwerowe (Azure Functions)
+            Opcje hostowania aplikacji w Azure
+            Wirtualne sieci w Azure (Azure Virtual Network)
+            Prywatne sieci wirtualne (Azure VPN)
+            Azure ExpressRoute
+            Azure DNS
+        Usługi magazynowania danych w Azure
+            Konta magazynu Azure
+            Nadmiarowość danych w magazynie Azure
+            Dostępne usługi magazynowe w Azure
+            Opcje migracji danych do Azure
+            Opcje przenoszenia plików w Azure
+        Tożsamość, dostęp i bezpieczeństwo w Azure
+            Usługi katalogowe Azure
+            Metody uwierzytelniania w Azure
+            Obsługa tożsamości zewnętrznych w Azure
+            Dostęp warunkowy (Conditional Access)
+            Kontrola dostępu oparta na rolach (RBAC)
+            Model bezpieczeństwa Zero Trust
+            Wielopoziomowa ochrona (defense-in-depth)
+            Microsoft Defender for Cloud
+    Zarządzanie i nadzór w środowisku Azure
+        Zarządzanie kosztami w Azure
+            Czynniki wpływające na koszty w środowisku Azure
+            Porównanie kalkulatorów: cennikowego i całkowitego kosztu posiadania (TCO)
+            Ćwiczenie – szacowanie kosztów obciążenia za pomocą kalkulatora cen
+            Ćwiczenie – porównanie kosztów obciążenia przy użyciu kalkulatora TCO
+            Narzędzie Microsoft Cost Management
+            Zastosowanie tagów do zarządzania kosztami i zasobami
+        Funkcje i narzędzia w Azure wspierające nadzór i zgodność z regulacjami
+            Zastosowanie platformy Microsoft Purview
+            Zastosowanie Azure Policy
+            Rola blokad zasobów (resource locks)
+            Znaczenie portalu Service Trust
+        Narzędzia monitorujące w Azure
+            Rola narzędzia Azure Advisor
+            Azure Service Health – stan usług i powiadomienia
+            Azure Monitor – monitorowanie wydajności i diagnostyka
+        </p>
+    </details>
+        <p class="text-gray-400 text-sm">Numer poświadczenia: X19-56827</p>
+    </div>
+</div>
+
+<!-- WordPress (2022) -->
+<div class="bg-gray-800 p-4 rounded-lg flex gap-4 items-start">
+        <button onclick="openLightbox('img/certificate WordPress.png')" class="contents">
+    <img src="img/certificate WordPress.png" class="w-16 h-16 rounded-md object-cover border border-gray-700">
+    </button>
+    <div>
+        <details><summary>
+        <h4 class="text-lg font-semibold leading-tight">Kurs WordPress — tworzenie stron od podstaw</h4>
+        <p class="text-gray-400 text-sm">strefakursów.pl — 2022</p>
+        </summary>
+        <p class="text-gray-300 text-xs mt-2">
+            Agenda obejmowała instalację WordPressa, konfigurację motywów,
+            tworzenie treści, zarządzanie wtyczkami, podstawy SEO oraz bezpieczeństwo witryn.
+        </p>
+        </details>
+    </div>
+</div>
+
+
+</div>
+
+</section>
+
+<!-- Webinary -->
+   <section id="certs" class="px-6 md:px-8 py-20">
+    <h2 class="text-3xl font-bold mb-10 text-center">Webinary</h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <!-- Cold Boot -->
+            <div class="bg-gray-800 p-4 rounded-lg flex gap-4 items-start">
+                <button onclick="openLightbox('img/Atak Cold Boot na żywo.png')" class="contents">
+                <img src="img/Atak Cold Boot na żywo.png" class="w-30 h-20 rounded-md object-cover border border-gray-700">
+                </button>
+                <div>
+                    <details><summary>
+                    <h4 class="text-lg font-semibold leading-tight">Atak Cold Boot na żywo</h4>
+                    <p class="text-gray-400 text-sm">sekurak — 2024</p>
+                    </summary>
+                    <p class="text-gray-300 text-xs mt-2">
+                        Agenda obejmowała demonstrację ataku Cold Boot, analizę zachowania pamięci RAM po zamrożeniu,
+                        odzyskiwanie kluczy szyfrujących oraz metody ochrony przed tego typu atakami.
+                    </p>
+                    </details>
+                </div>
+            </div>
+
+            <!-- Hackowanie sieci -->
+            <div class="bg-gray-800 p-4 rounded-lg flex gap-4 items-start">
+                <button onclick="openLightbox('img/Hackowanie sieci na żywo!.png')" class="contents">
+                    <img src="img/Hackowanie sieci na żywo!.png" class="w-30 h-20 rounded-md object-cover border border-gray-700">
+                </button>
+                <div>
+                    <details><summary>
+                    <h4 class="text-lg font-semibold leading-tight">Hackowanie sieci na żywo!</h4>
+                    <p class="text-gray-400 text-sm">sekurak — 2024</p>
+                    </summary>
+                    <p class="text-gray-300 text-xs mt-2">
+                        Szkolenie obejmowało praktyczne ataki na sieci, analizę ruchu, przechwytywanie pakietów,
+                        ataki MITM oraz wykorzystanie błędów konfiguracyjnych.
+                    </p>
+                    </details>
+                </div>
+            </div>
+
+            <!-- Web hacking -->
+            <div class="bg-gray-800 p-4 rounded-lg flex gap-4 items-start">
+                <button onclick="openLightbox('img/Dlaczego hackowanie aplikacji webowych jest proste.png')" class="contents">
+                    <img src="img/Dlaczego hackowanie aplikacji webowych jest proste.png" class="w-30 h-20 rounded-md object-cover border border-gray-700">
+                </button>
+                <div>
+                    <details><summary>
+                    <h4 class="text-lg font-semibold leading-tight">Dlaczego hackowanie aplikacji webowych jest proste?</h4>
+                    <p class="text-gray-400 text-sm">sekurak — 2024</p>
+                    </summary>
+                    <p class="text-gray-300 text-xs mt-2">
+                        Agenda obejmowała typowe podatności aplikacji webowych, błędy programistyczne,
+                        ataki XSS, SQLi, CSRF, problemy z autoryzacją oraz analizę ruchu HTTP.
+                    </p>
+                    </details>
+                </div>
+            </div>
+
+            <!-- Wyciek danych -->
+            <div class="bg-gray-800 p-4 rounded-lg flex gap-4 items-start">
+                <button onclick="openLightbox('img/Wyciek danych okiem prawnika.png')" class="contents">
+                    <img src="img/Wyciek danych okiem prawnika.png" class="w-30 h-20 rounded-md object-cover border border-gray-700">
+                </button>
+                <div>
+                    <details><summary>
+                    <h4 class="text-lg font-semibold leading-tight">Wyciek danych okiem prawnika</h4>
+                    <p class="text-gray-400 text-sm">sekurak — 20.12.2023</p>
+                    </summary>
+                    <p class="text-gray-300 text-xs mt-2">
+                        Analiza przypadku wycieku danych
+                        Sesja pytań i odpowiedzi
+                    </p>
+                    </details>
+                </div>
+            </div>
+
+            <!-- Cyberzbóje v5 -->
+            <div class="bg-gray-800 p-4 rounded-lg flex gap-4 items-start">
+                <button onclick="openLightbox('img/Nie daj się cyberzbójom! v5.0.png')" class="contents">
+                    <img src="img/Nie daj się cyberzbójom! v5.0.png" class="w-30 h-20 rounded-md object-cover border border-gray-700">
+                </button>
+                <div>
+                    <details><summary>
+                    <h4 class="text-lg font-semibold leading-tight">Nie daj się cyberzbójom! v5.0</h4>
+                    <p class="text-gray-400 text-sm">sekurak — 8.12.2023</p>
+                    </summary>
+                    <p class="text-gray-300 text-xs mt-2">
+                        Aktualny przegląd cyberoszustw
+                        Co slychać w świecie ransomware?
+                        Miałem wyciek danych, co robić?
+                        Przypomnienie najistotniejszych problemów, omawianych na poprzednich edycjach Nie daj się cyberzbójom
+                        Sesja pytań i odpowiedzi
+                    </p>
+                    </details>
+                </div>
+            </div>
+
+            <!-- AD cz. I -->
+            <div class="bg-gray-800 p-4 rounded-lg flex gap-4 items-start">
+                <button onclick="openLightbox('img/Wprowadzenie do bezpieczeństwa w Active Directory (część 1).png')" class="contents">
+                    <img src="img/Wprowadzenie do bezpieczeństwa w Active Directory (część 1).png" class="w-30 h-20 rounded-md object-cover border border-gray-700">
+                </button>
+                <div>
+                    <details><summary>
+                    <h4 class="text-lg font-semibold leading-tight">Wprowadzenie do bezpieczeństwa w Active Directory (część 1)</h4>
+                    <p class="text-gray-400 text-sm">sekurak — 1.12.2023</p>
+                    </summary>
+                    <p class="text-gray-300 text-xs mt-2">
+                        Podstawy Active Directory w pigułce
+                        Baseline Active Directory w organizacji
+                        Konta Break Glass Acount - jak mogą nas ochronić
+                        Co w trawie piszczy, czyli jak zrobić zrzut ustawień mojego AD
+                        Omówienie ustawień i tego, co znaleźliśmy
+                        Q&A
+                    </p>
+                    </details>
+                </div>
+            </div>
+
+            <!-- Windows Security cz. 2 -->
+            <div class="bg-gray-800 p-4 rounded-lg flex gap-4 items-start">
+                <button onclick="openLightbox('img/Wprowadzenie do bezpieczeństwa w Active Directory (część 1).png')" class="contents">
+                    <img src="img/Poznaj bezpieczeństwo Windows część 2 Lokalne uwierzytelnianie i autoryzacja w systemach windows.png" class="w-30 h-20 rounded-md object-cover border border-gray-700">
+                </button>
+                <div>
+                    <details><summary>
+                    <h4 class="text-lg font-semibold leading-tight">Poznaj bezpieczeństwo Windows część 2 Lokalne uwierzytelnianie i autoryzacja w systemach windows</h4>
+                    <p class="text-gray-400 text-sm">sekurak — 15.05.2023</p>
+                    </summary>
+                    <p class="text-gray-300 text-xs mt-2">
+                        Uwierzytelnianie czy autoryzacja
+                        Architektura systemu uwierzytelniania
+                        Konta i grupy lokalne
+                        Przywileje i polityki dostępu
+                        Baza SAM
+                        Token użytkownika
+                        User Account Control
+                        Uprawnienia DACL/SACL
+                        Kradzież tożsamości
+                        Nadużycia uprawnień obiektów
+                    </p>
+                </details>
+                </div>
+            </div>
+
+            <!-- Wireshark -->
+            <div class="bg-gray-800 p-4 rounded-lg flex gap-4 items-start">
+                <button onclick="openLightbox('img/Praktyczny Wireshark.png')" class="contents">
+                    <img src="img/Praktyczny Wireshark.png" class="w-30 h-20 rounded-md object-cover border border-gray-700">
+                </button>
+                <div>
+                    <details><summary>
+                    <h4 class="text-lg font-semibold leading-tight">Praktyczny Wireshark</h4>
+                    <p class="text-gray-400 text-sm">sekurak — 19.04.2023</p>
+                    </summary>
+                    <p class="text-gray-300 text-xs mt-2">
+                        Wprowadzenie do analizy sieciowej
+                        Zapoznanie sie z plikami PCAP
+                        Zapoznanie się z narzedziem Wireshark
+                        Dodatkowa konfiguracja narzędzia poprawiającego efektywność praktyczne
+                        Ćwiczenia praktyczne
+                        Namierzanie infekcji typu stealer w ruchu sieciowym
+                        Namierzanie nieznanej infekcji na podstawie anomalii i artefaktów (fingerprinting)
+                        Sposób na dekodowanie ruchu szyfrowanego
+                        Namierzanie malware w infrastrukturze firmy
+                        Namierzanie ataku MiTM w strukturze LAN (analiza ARP)
+                        Sesja Q&A
+                    </p>
+                    </details>
+                </div>
+            </div>
+
+            <!-- Dlaczego hackowanie sieci jest proste? (2023) -->
+            <div class="bg-gray-800 p-4 rounded-lg flex gap-4 items-start">
+                <button onclick="openLightbox('img/Dlaczego hackowanie sieci jest proste.png')" class="contents">
+                    <img src="img/Dlaczego hackowanie sieci jest proste.png" class="w-16 h-16 rounded-md object-cover border border-gray-700">
+                </button>
+                <div>
+                    <details><summary>
+                    <h4 class="text-lg font-semibold leading-tight">Dlaczego hackowanie sieci jest proste?</h4>
+                    <p class="text-gray-400 text-sm">sekurak — 03.04.2023</p>
+                    </summary>
+                    <p class="text-gray-300 text-xs mt-2">
+                        Rekonesans infrastruktury IT celu
+                        Przełamanie kilku zabezpieczeń w: urządzeniach sieciowych, aplikacjach webowych
+                        Poruszanie się atakującego po infrastrukturze
+                        Jak z poziomu zwykłego użytkownika zdobyć uprawnienia administratora [Windows, Linux]
+                        Jak przejąć kontroler domeny?
+                        Jak przed tym wszystkim sie zabezpieczyć?
+                    </p>
+                    </details>
+                </div>
+            </div>
+
+            <!-- Ransomware ESXiArgs (2023) -->
+            <div class="bg-gray-800 p-4 rounded-lg flex gap-4 items-start">
+                <button onclick="openLightbox('img/Ransomware ESXiArgs i dobre praktyki ochrony środowisk wirtualnych VMware.png')" class="contents">
+                    <img src="img/Ransomware ESXiArgs i dobre praktyki ochrony środowisk wirtualnych VMware.png" class="w-16 h-16 rounded-md object-cover border border-gray-700">
+                </button>
+                <div>
+                    <details><summary>
+                    <h4 class="text-lg font-semibold leading-tight">Ransomware ESXiArgs i dobre praktyki ochrony środowisk wirtualnych VMware</h4>
+                    <p class="text-gray-400 text-sm">sekurak — 09.03.2023</p>
+                    </summary>
+                    <p class="text-gray-300 text-xs mt-2">
+                        Killchain ESXiArgs
+                        Sposób działania kryptora
+                        Obsługa incydentów
+                        Obrona i ochrona interfejsów zarządzających VMware vSphere, vCenter oraz pozostałych
+                        Usprawnienie i rozdzielenie uwierzytelniania w infrastrukturze
+                        Inwentaryzacja infrastruktury IT wraz z aplikacjami oraz ruchem sieciowym
+                        Jak wdrożyć poprawny proces patchowania w firmie wspomagając się rozwiązaniami klasy IDS/IPS/NDR
+                        Stworzenie dedykowanego, oddzielnego komponentu pilnie chronionego na potrzeby dostępu do środowisk VMware - architektura, narzędzia bezpieczeństwa, proces
+                        Funkcje kopii zapasowych oraz możliwości odtworzenia w dowolnym miejscu na Ziemi w pojedyncze godziny
+                        Ciągłe monitorowanie zgodności środowiska, np: ISO 270001
+                        O co w szczególności dbać w vSphere i vCenter, czyli jak wykryć, że mamy intruza i jak się go pozbyć zanim narobi nam szkód -  narzędzia i procesy
+                        Stworzenie i weryfikacja planu zapewnienia ciągłośći działania - BCP
+                    </p>
+                    </details>
+                </div>
+            </div>
+
+            <!-- Bezpieczeństwo Windows cz. 1 (2023) -->
+            <div class="bg-gray-800 p-4 rounded-lg flex gap-4 items-start">
+                <button onclick="openLightbox('img/Poznaj bezpieczeństwo Windows część 1 Usługi systemowe.png')" class="contents">
+                    <img src="img/Poznaj bezpieczeństwo Windows część 1 Usługi systemowe.png" class="w-16 h-16 rounded-md object-cover border border-gray-700">
+                </button>
+                <div>
+                    <details><summary>
+                    <h4 class="text-lg font-semibold leading-tight">Poznaj bezpieczeństwo Windows - część 1 usługi systemowe</h4>
+                    <p class="text-gray-400 text-sm">sekurak — 20.03.2023</p>
+                    </summary>
+                    <p class="text-gray-300 text-xs mt-2">
+                       Idea usług (serwisów) systemowych
+                       Architektura: Service manager, baza danych, komunikacja sieciowa, komunikacja z usługami, uprawnieniami
+                       Usługi oparte o svchost
+                       Procesy chronione
+                       Usługi uruchamiane przez ETW i WNF
+                       Blokowanie komunikacji sieciowej
+                       Ukrywanie usług przed administratorami
+                       Wykrywanie ukrytych usługWykrywanie niebezpiecznych uprawnień do usług
+                       Wykrywanie ukrytych usługWykrywanie niebezpiecznych uprawnień do bazy danych
+                       Wykrywanie ukrytych usługWykrywanie niebezpiecznych uprawnień do binariów
+                       Wykrywanie niechcianych binariów
+                       Przykładowa złośliwa usługa. Projekt, kod, implementacja
+                    </p>
+                    </details>
+                </div>
+            </div>
+
+            <!-- Cyberzbóje v3.0 (2023) -->
+            <div class="bg-gray-800 p-4 rounded-lg flex gap-4 items-start">
+                <button onclick="openLightbox('img/Nie daj się cyberzbójom! v3.0.png')" class="contents">
+                    <img src="img/Nie daj się cyberzbójom! v3.0.png" class="w-16 h-16 rounded-md object-cover border border-gray-700">
+                </button>
+                <div>
+                    <details><summary>
+                    <h4 class="text-lg font-semibold leading-tight">Nie daj się cyberzbójom! v3.0</h4>
+                    <p class="text-gray-400 text-sm">sekurak — 15.03.2023</p>
+                    </summary>
+                    <p class="text-gray-300 text-xs mt-2">
+                        Aktualne zagrożenia / ataki na polskich internautów - na podstawie badań sekuraka
+                        Dostałem prośbę o złożenie oferty, ale skończyło się na infekcji mojego komputera. Jak do tego doszło?
+                        VPN - fanaberia, konieczność, a może tylko dobry marketing?
+                        Czy zapisywanie haseł w chrome jest bezpieczne?
+                    </p>
+                    </details>
+                </div>
+            </div>
+        
+            </div>
+            </section>
+
+    <!-- INTERESTS -->
+    <section id="interests" class="px-6 md:px-8 py-16 md:py-20 bg-gray-800">
+        <h3 class="text-3xl font-bold mb-6 text-center">Zainteresowania</h3>
+        <p class="text-gray-400 max-w-3xl mx-auto text-center">
+            Technologie IT, wirtualizacja, automatyzacja, smart home, sieci komputerowe,
+            bezpieczeństwo IT, fotografia, podróże, zwiedzanie Dolnego Śląska.
+        </p>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="px-6 md:px-8 py-16 md:py-20">
+        <h3 class="text-3xl font-bold mb-6 text-center">Kontakt</h3>
+
+        <div class="max-w-xl mx-auto text-center">
+            <p class="text-gray-400 mb-4">Skontaktuj się ze mną:</p>
+            <p class="text-gray-300">📧 kontakt@twojadomena.pl</p>
+            <p class="text-gray-300">🔗 LinkedIn / GitHub</p>
+            <p class="text-gray-300">📍 Dolny Śląsk</p>
+        </div>
+    </section>
+
+    <!-- LIGHTBOX -->
+    <div id="lightbox" class="fixed inset-0 bg-black bg-opacity-80 hidden justify-center items-center z-50">
+        <img id="lightbox-img" src="" class="max-w-full max-h-full rounded-lg shadow-xl">
+    </div>
+
+    <script>
+    function openLightbox(src) {
+        document.getElementById("lightbox-img").src = src;
+        document.getElementById("lightbox").classList.remove("hidden");
+    }
+
+    document.getElementById("lightbox").addEventListener("click", () => {
+        document.getElementById("lightbox").classList.add("hidden");
+    });
+    </script>
+
+</body>
+</html>
